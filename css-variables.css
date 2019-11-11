@@ -12,9 +12,6 @@
 /**Dark theme **/
 @media screen and (prefers-color-scheme: dark) {
     :root {
-        --main-base: #EB680D;
-        --main-dark: #c64b03;
-        --main-ligth: #fc9153;
         --dark: white;
         --light: black;
     }
