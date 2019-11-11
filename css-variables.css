@@ -1,0 +1,118 @@
+/** Light theme **/
+@media screen and (prefers-color-scheme: light) {
+    :root {
+        --main-base: #EB680D;
+        --main-dark: #c64b03;
+        --main-ligth: #fc9153;
+        --dark: black;
+        --light: white;
+    }
+}
+
+/**Dark theme **/
+@media screen and (prefers-color-scheme: dark) {
+    :root {
+        --main-base: #EB680D;
+        --main-dark: #c64b03;
+        --main-ligth: #fc9153;
+        --dark: white;
+        --light: black;
+    }
+
+    button {
+        color: var(--dark);
+    }
+}
+
+body {
+    background: var(--light);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100vh;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+section {
+    width: 50vw;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+h1,
+p {
+    color: var(--dark);
+    font-family: monospace;
+}
+
+p {
+    font-size: 16px;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 3rem;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+h1:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    background: var(--main-ligth);
+    opacity: 50%;
+    margin-top: -4rem;
+    margin-left: -2rem;
+    z-index: -1;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+button {
+    background-color: var(--main-base);
+    border: 1px solid var(--main-base);
+    color: var(--light);
+    padding: 1em;
+    border-radius: 100px;
+}
+
+button:hover {
+    background: var(--main-dark);
+    border: 1px solid var(--main-dark);
+    color: var(--light);
+}
+
+@media (max-width:800px) {
+    section {
+        width: 80vw;
+    }
+}
+
+@media (max-width:600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h1:after {
+        position: relative;
+        width: 100%;
+        z-index: 0;
+        margin-top: 1rem;
+        margin-left: 0;
+        height: 1rem;
+        ;
+    }
+
+}
