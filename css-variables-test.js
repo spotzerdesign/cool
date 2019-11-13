@@ -2,5 +2,5 @@
 
 cssVars({
     // Options...
-    variables:("--main2", "red")
+    variables:("--main", "red")
   });
