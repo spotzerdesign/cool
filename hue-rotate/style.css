@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+
+:root {
+  --invert: 0;
+  --sepia: 0;
+  --saturate: 1;
+  --hueRotate: 0turn;
+  --brightness: 1;
+}
+body {
+  background-color: #25333A;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: space-around;
+  color: #ffffff;
+  font-family: 'Fjalla One', sans-serif;
+}
+.filtertext {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+}
+.icon__cont {
+  width: 50vw;
+  text-align: center;
+}
+.icon {
+  filter: invert(var(--invert)) 
+          sepia(var(--sepia)) 
+          saturate(var(--saturate))
+          hue-rotate(var(--hueRotate))
+          brightness(var(--brightness));
+  min-width: 100px;
+}

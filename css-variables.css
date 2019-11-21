@@ -6,6 +6,8 @@
         --main-ligth: #fc9153;
         --dark: black;
         --light: white;
+        --main-grad: linear-gradient(90deg, var(--main-dark) 0%, var(--main-ligth) 100%);
+
     }
 }
 

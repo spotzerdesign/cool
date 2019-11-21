@@ -3,7 +3,7 @@
     <meta content="noindex, nofollow" name="robots">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#EC5E08">
-    <link href="css-variables-test.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <script type='text/javascript'
         src='https://rawcdn.githack.com/nuxodin/ie11CustomProperties/d8abc414fa8ac49135e0029452e253d418d2f866/ie11CustomProperties.js'>
     </script>
@@ -13,5 +13,19 @@
 </head>
 
 <body>
-
+        <script hidden>
+                !document.body.msMatchesSelector;
+                var styleElements = document.querySelectorAll('style:not([hidden]), script:not([hidden])');
+                for (var i=0, styleElement; styleElement = styleElements[i++];) {
+                  const pre = document.createElement('pre');
+                  var contents = styleElement.innerHTML;
+                  contents = contents.replace(/-ie-/g, '--');
+                  contents = contents.replace(/-ieVar-[^;]+(;)?( )?/g, '');
+                  pre.innerHTML = htmlEntities(contents.trim());
+                  styleElement.parentNode.insertBefore(pre, styleElement);
+                }
+                function htmlEntities(str) {
+                  return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+                }
+              </script>
 </body>

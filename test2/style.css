@@ -1,0 +1,47 @@
+body {
+    --theme-color:blue;
+    display:flex;
+    flex-wrap:wrap;
+  }
+  body > * {
+    max-width:500px;
+    margin:2rem;
+    padding:2rem;
+    overflow:auto;
+    border:2px solid var(--theme-color);
+  }
+  h2 {
+    border-bottom:2px solid var(--theme-color);
+  }
+  a {
+    color:var(--theme-color);
+  }
+  button {
+    background-color:var(--theme-color);
+  }
+  pre {
+    color:#fff;
+    background-color:var(--theme-color);
+    font-size:13px;
+    padding:1em;
+    overflow:auto;
+  }
+</style>
+
+
+
+<div id=pseudoClasses tabindex=0>
+  <h2>Pseudo-classes (:hover, :focus, :target)</h2>
+  <ul>
+      <li class=hasHover>Has Hover</li>
+      <li class=hasTarget>Has Target</li>
+      <li class=hasFocus>Has Focus</li>
+  </ul>
+  <a href="#pseudoClasses">target to #pseudoClasses</a><br>
+  <a href="#">click to set target #</a><br>
+  <style>
+#pseudoClasses:hover .hasHover,
+#pseudoClasses:target .hasTarget,
+#pseudoClasses:focus .hasFocus {
+  background:var(--theme-color);
+}
